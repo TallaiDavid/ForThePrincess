@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galéria - Képek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="gallery.html" class="active">🖼️ Képek</a>
+    <a href="videos.html">🎥 Videók</a>
+  </nav>
+
+  <main class="gallery-container">
+    <h1>✨ Húzd ide a képeid ✨</h1>
+    <div id="dropzone" class="dropzone">
+      <p>Dobd ide a képeket 📸</p>
+    </div>
+
+    <h2>📂 Feltöltött képek:</h2>
+    <div id="preview" class="preview"></div>
+
+    <!-- Random gifek -->
+    <div id="random-gifs"></div>
+  </main>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
