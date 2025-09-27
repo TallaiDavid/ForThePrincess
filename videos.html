@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galéria - Videók</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .video-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .video-card video {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .video-card {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+
+    .video-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="gallery.html">🖼️ Képek</a>
+    <a href="videos.html" class="active">🎥 Videók</a>
+  </nav>
+
+  <main class="videos-container">
+    <h1>🎬 Lies of P highlightok</h1>
+    <p>Itt vannak a kis trophy/achievement videók, amik rólad jutottak eszembe 💕</p>
+
+    <div class="video-list"></div>
+  </main>
+
+  <script src="videos.js"></script>
+</body>
+</html>
