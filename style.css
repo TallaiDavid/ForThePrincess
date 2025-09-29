@@ -577,3 +577,136 @@ button:hover {
     transform: translateY(100vh) rotate(720deg);
   }
 }
+
+/* ----------------------------------------------------------------------mood meter -*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #e6f7ff, #fff0f6);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  text-align: center;
+  padding: 2rem;
+  color: #333;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  color: #cc3366;
+}
+
+.intro-message {
+  font-size: 1.2rem;
+  color: #ff6699;
+  margin-bottom: 0.5rem;
+}
+
+.slider-container {
+  margin: 3rem auto;
+  max-width: 500px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ff5d8f, #8aff80);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #cc3366;
+  cursor: grab;
+}
+
+.mood-message {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.cat-zone img {
+  width: 180px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cat-zone img:hover {
+  transform: scale(1.1);
+}
+
+/* Halacska */
+.draggable {
+  width: 80px;
+  cursor: grab;
+}
+
+.food-zone {
+  margin-top: 20px;
+}
+
+.hidden { display: none; }
+
+/* shake effekt */
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(-5px,0); }
+  40% { transform: translate(5px,0); }
+  60% { transform: translate(-5px,0); }
+  80% { transform: translate(5px,0); }
+  100% { transform: translate(0,0); }
+}
+
+/* Purr effekt nagyobb méret */
+.purr {
+  position: absolute;
+  width: 60px; /* nagyobb */
+  animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-80px); opacity: 0; }
+}
+
+/* Felhők */
+#word-cloud {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#word-cloud span {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff69b4;
+  opacity: 0;
+  animation: fadeWord 7s ease forwards;
+}
+
+@keyframes fadeWord {
+  0% { opacity: 0; transform: scale(0.5); }
+  20% { opacity: 1; transform: scale(1.1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+
