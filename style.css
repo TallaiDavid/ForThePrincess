@@ -710,3 +710,98 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
+/* *******************************************************************meglepetés */
+
+.surprise-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.rap-cat {
+  width: 200px;
+  margin: 1rem;
+}
+
+#rapText p {
+  font-size: 1.2rem;
+  color: #cc3366;
+  animation: fadeIn 1s ease-in;
+}
+
+.riddle-section {
+  margin-top: 2rem;
+}
+
+.answerBtn {
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #ff85c1;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answerBtn:hover {
+  background: #ff5d8f;
+  transform: scale(1.1);
+}
+
+.result-cat {
+  width: 150px;
+  margin-top: 1rem;
+}
+
+
+.gift-section {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.gift-img {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gift-img:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.riddles-img {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 200px;
+}
+
+.riddle-decor img {
+  position: absolute;
+  width: 120px;
+  opacity: 0.8;
+}
+
+.decor-left {
+  top: 150px;
+  left: 20px;
+}
+
+.decor-right {
+  top: 150px;
+  right: 20px;
+}
+
+.decor-bottom {
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#riddleSection {
+  position: relative;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
