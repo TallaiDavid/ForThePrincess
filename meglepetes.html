@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 Meglepetés</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="meglepetes.html" class="active">🎁 Meglepetés</a>
+  </nav>
+
+  <main>
+    <h1>🎉 Meglepetés, Hercegnő!</h1>
+    
+    <!-- Rappelő cica -->
+    <section id="rapSection">
+      <h2>🐱 Rappelő Cica</h2>
+      <img id="rapCat" src="assets/rapper1.gif" alt="Rap Cat" style="width:200px;">
+      <button id="startRap">🎤 Indítsd a Rapet!</button>
+      <div id="rapText" class="rap-box"></div>
+    </section>
+
+    <div id="rapper2Container"></div>
+
+    <hr>
+
+    <!-- Találós kérdés -->
+    <section id="riddleSection">
+  <h2>❓ King of Riddles</h2>
+  <img src="assets/riddles.png" alt="Riddles" class="riddles-img">
+
+  <!-- fix díszítő gifek -->
+  <div class="riddle-decor">
+    <img src="assets/meme6.gif" class="decor-left">
+    <img src="assets/car11.gif" class="decor-right">
+  </div>
+
+  <div id="riddleContainer">
+    <button id="startRiddle">Kezdjük!</button>
+  </div>
+  <div id="riddleResult"></div>
+  <p id="timerMessage"></p>
+</section>
+
+
+  <script src="meglepetes.js"></script>
+</body>
+</html>
