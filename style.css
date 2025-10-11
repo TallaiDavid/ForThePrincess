@@ -805,3 +805,133 @@ input[type=range]::-webkit-slider-thumb {
   text-align: center;
 }
 
+/* *******************************************************************game */
+/* ==== GAME PAGE ==== */
+body {
+  background: linear-gradient(to bottom, #ffe6f2, #fff0f6);
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  overflow-x: hidden;
+  color: #b30059;
+}
+
+/* 🌸 NAVBAR */
+.navbar {
+  background: linear-gradient(to right, #ffb3cc, #ff80aa);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(255, 150, 200, 0.4);
+}
+.navbar a {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 17px;
+  color: #b30059;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.navbar a.active {
+  background-color: #ff6fa8;
+  color: white;
+}
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
+/* 🎮 GAME MENU */
+.game-menu {
+  text-align: center;
+  padding-top: 60px;
+  position: relative;
+}
+
+/* főcica és üzenet */
+.main-cat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-cat-gif {
+  width: 200px;
+  margin-bottom: 15px;
+}
+.touching-text {
+  font-size: 18px;
+  background: rgba(255, 240, 245, 0.8);
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(255, 150, 200, 0.4);
+}
+
+/* játék gombok */
+.game-buttons button {
+  margin: 10px;
+  background-color: #ff6fa8;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s ease;
+}
+.game-buttons button:hover {
+  transform: scale(1.1);
+  background-color: #ff5899;
+}
+
+/* 🌙 Dreamland rész */
+.dreamland-section {
+  margin-top: 80px;
+  position: relative;
+  text-align: center;
+}
+.secret-cat {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.secret-cat:hover {
+  transform: scale(1.1);
+}
+.hidden-wall {
+  width: 300px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: filter 1s ease;
+}
+.glow-effect {
+  filter: drop-shadow(0 0 15px rgba(255, 200, 250, 0.9))
+          drop-shadow(0 0 30px rgba(255, 150, 250, 0.6));
+  animation: pulseGlow 2s infinite alternate;
+}
+@keyframes pulseGlow {
+  0% { transform: translateX(-50%) scale(1); }
+  100% { transform: translateX(-50%) scale(1.05); }
+}
+.dream-msg {
+  margin-top: 180px;
+  font-style: italic;
+  color: #884466;
+}
+
+/* oldalsó cicák */
+.side-cat {
+  width: 100px;
+  position: absolute;
+  pointer-events: none;
+}
+.left-cat { left: 40px; top: 200px; }
+.right-cat { right: 40px; top: 180px; }
+.left-lower { left: 80px; bottom: 200px; }
+.right-lower { right: 80px; bottom: 160px; }
+.bottom-left { left: 60px; bottom: 80px; }
+
