@@ -68,8 +68,7 @@ function transitionToFinal() {
     finalScene.classList.add("visible");
 
     // YouTube zene csak most induljon
-    music.src =
-      "https://www.youtube.com/embed/7yLxxyzGiko?autoplay=1&loop=1&playlist=7yLxxyzGiko";
+    
 
     // szöveg és Spotify fade-in késleltetve
     setTimeout(() => {
@@ -81,3 +80,4 @@ function transitionToFinal() {
     }, 3500);
   }, 3000);
 }
+
