@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alien Isolation 🛸</title>
+  <link rel="stylesheet" href="alien.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>👽 Cica vs Alien</h1>
+    <div class="nav-links">
+      <a href="index.html">Főoldal</a>
+      <a href="game.html">Menü</a>
+    </div>
+  </nav>
+
+  <div class="game-container">
+    <div class="game-area" id="gameArea">
+      <img id="cat" src="assets/sad-cat.gif" alt="Cica">
+      <div id="gameOver" class="overlay hidden">
+        <p>😿 Sajnos elkapta az alien...</p>
+        <button id="retryBtn">🔁 Újra</button>
+        <button id="menuBtn">🏠 Menü</button>
+      </div>
+      <div id="victory" class="overlay hidden">
+        <p>🎉 Túlélte a cica az idegen inváziót! [Most Dávidot molesztálja az Alien]</p>
+        <button id="menuBtn2">🏠 Menü</button>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="timer">
+        <span id="timer">50</span> mp ⏱️
+      </div>
+      <div id="hearts"></div>
+      <button id="protectBtn">💖 Protect</button>
+    </div>
+  </div>
+
+  <script src="alien.js"></script>
+</body>
+</html>

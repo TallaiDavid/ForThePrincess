@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lies of P – Cicus Kratban</title>
+  <link rel="stylesheet" href="liesofp.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="game.html">🎮 Pályaválasztó</a>
+  </nav>
+
+  <div class="game-container">
+    <div class="hud">
+      <span class="timer">⏱️ <span id="timer">40</span></span>
+      <span class="hearts" id="hearts"></span>
+      <button id="protectBtn">⚔️ Protect</button>
+      <button id="menuBtn">↩️ Menü</button>
+    </div>
+
+    <div class="game-area" id="gameArea">
+      <img id="cat" src="assets/car2.gif" alt="Cica">
+      <div id="victory" class="overlay hidden">
+        🎭 Túlélte a cicus Krat utcáit!  
+        <button id="menuBtn2">↩️ Menübe</button>
+      </div>
+      <div id="gameOver" class="overlay hidden">
+        ☠️ A puppetek legyőzték a cicát...  
+        <button id="retryBtn">🔁 Újra</button>
+        <button id="menuBtn3">↩️ Menü</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="liesofp.js"></script>
+</body>
+</html>

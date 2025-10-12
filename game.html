@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 Játék menü – Hercegnő Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🌸 NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="game.html" class="active">🎮 Játék menü</a>
+  </nav>
+
+  <!-- 🎮 GAME MENU -->
+  <div class="game-menu">
+    <div class="game-buttons">
+      <button id="lovardaBtn" onclick="startGame('lovarda')">🏇 Lovarda</button>
+      <button id="liesBtn" onclick="startGame('liesofp')">🕰 Lies of P</button>
+      <button id="alienBtn" onclick="startGame('alien')">👽 Alien</button>
+      <button id="egyetemBtn" onclick="startGame('egyetem')">🎓 Egyetem</button>
+    </div>
+
+    <!-- 🐱 FŐCICA ÉS ÜZENET -->
+    <div class="main-cat">
+      <img src="assets/car18.gif" alt="main cat" class="main-cat-gif">
+      <div class="touching-text">
+        hercegnő, tudom sok mindenen mentünk keresztül, és szeretném ha jól éreznéd magad. <br>
+        ezért készítettem ezt az oldalt is, hogy megmutassam, mennyire fontos vagy nekem, és hogy az én cuki nyuszikám mindent megérdemel,
+        kérlek próbáld ki a saját játékaid, mindegyiknek az a célja hogy megvédjelek, hogy ne essen bajod, és a legrosszabb helyeket is eltudd viselni <br> 
+        a végén még egy meglepi is lesz :D
+      </div> 
+    </div>
+
+    <!-- 🐾 OLDALSÓ CICÁK -->
+    <div class="side-cats">
+      <img src="assets/car19.gif" class="side-cat left-cat">
+      <img src="assets/car12.gif" class="side-cat right-cat">
+      <img src="assets/car20.gif" class="side-cat left-lower">
+      <img src="assets/car21.gif" class="side-cat right-lower">
+      <img src="assets/car22.gif" class="side-cat bottom-left">
+    </div>
+
+    <!-- 🌙 DREAMLAND -->
+    <div class="dreamland-section">
+      <img src="assets/car6.gif" class="secret-cat" id="secretCat" alt="Secret cat">
+      <img src="assets/wall.gif" class="hidden-wall" id="wallGif" alt="Wall to Dreamland">
+      <div class="dream-msg" id="dreamMsg">
+        valami csillog a háttérben… de talán még korai megérinteni 🌙
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

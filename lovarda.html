@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐴 Lovarda Kaland</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lovarda.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-title">🐾 Cica Kalandjai</div>
+    <div class="nav-links">
+      <a href="index.html">🏠 Főoldal</a>
+      <a href="game.html" class="active">🎮 Menü</a>
+    </div>
+  </nav>
+
+  <div class="game-container">
+    <div class="game-area" id="gameArea">
+      <img id="cat" src="assets/car2.gif" alt="Cica">
+    </div>
+
+    <div class="hud">
+      <div class="timer">⏱️ <span id="timer">40</span> mp</div>
+      <div class="hearts" id="hearts"></div>
+      <button id="protectBtn">💖 Protect</button>
+    </div>
+  </div>
+
+  <div id="gameOver" class="overlay hidden">
+    <p>😿 Sajnos a cica elbukott! Próbáld újra!</p>
+    <button id="retryBtn">🔁 Újrapróbálom</button>
+    <button id="menuBtn">🏠 Menü</button>
+  </div>
+
+  <div id="victory" class="overlay hidden">
+    <p>🎉 Sikerült! Cicus túljutott az akadályokon!</p>
+    <button id="menuBtn2">🏠 Menü</button>
+  </div>
+
+  <script src="lovarda.js"></script>
+</body>
+</html>

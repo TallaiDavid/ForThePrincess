@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egyetem pálya</title>
+  <link rel="stylesheet" href="egyetem.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főmenü</a>
+    <a href="game.html">🎮 Pályaválasztó</a>
+  </nav>
+
+  <div class="game-container">
+    <div class="game-area" id="gameArea">
+      <img id="cat" src="assets/car2.gif" alt="Cica" />
+      <div class="overlay hidden" id="victory">
+        <p>🎉 Gratulálok, teljesítetted az egyetemet!</p>
+        <button id="retryBtn">🔁 Újrajátszás</button>
+        <button id="menuBtn">🏠 Menü</button>
+      </div>
+      <div class="overlay hidden" id="gameOver">
+        <p>😿 Elbuktál a vizsgán, hercegnő!</p>
+        <button id="retryBtn2">🔁 Újrajátszás</button>
+        <button id="menuBtn2">🏠 Menü</button>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="hearts" id="hearts"></div>
+      <div class="timer">⏱️ Idő: <span id="timer">60</span> mp</div>
+      <div id="superTimer"></div>
+      <button id="protectBtn">💖 Protect</button>
+      <button id="superProtectBtn">🌟 Super Protection</button>
+    </div>
+  </div>
+
+  <script src="egyetem.js"></script>
+</body>
+</html>

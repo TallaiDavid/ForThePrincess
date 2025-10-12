@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dreamland 🌙</title>
+  <link rel="stylesheet" href="dreamland.css">
+</head>
+<body>
+  <!-- Első jelenet -->
+  <div id="scene">
+    <div class="character" id="girl"></div>
+    <div class="text-bubble" id="bubble"></div>
+
+    <div class="enemies" id="enemies">
+      <img src="assets/homeless.gif" class="enemy" id="homeless">
+      <img src="assets/clowns.gif" class="enemy" id="clown">
+    </div>
+
+    <img src="assets/hero.gif" id="hero" alt="Hero Cat">
+  </div>
+
+  <!-- Második (final) jelenet -->
+  <div id="finalScene">
+    <div class="final-text">
+      <p id="loveText">
+        hercegnő, most már biztonságban vagy 💗<br>
+        itt, velem, a Dreamlandben. <br>
+        Hercegnő, mellettem soha nem leszel egyedül <br>
+        Te vagy az életem érte, minden boldogságom alapja <br>
+        Ezért hoztam létre neked Dreamlandet! 😺 <br>
+        Nem akarom hogy barátok, akik valójában kibeszélős bohócok <br>
+        és a szereteteden élősködő hajléktalan tovább bántsanak téged. <br>
+        Szóval ha élőben nem vagyok ott veled, és nem akarsz hívásozni, <br>
+        én akkor is itt várlak Dreamlanden, akár jól, akár rosszul érzed magad, <br>
+        hogy legyen egy safe place a kedvenc zenéidhez, hogy csendben emlékeztesselek, nem vagy már egyedül 😁 <br>
+        köszönöm hogy vagy nekem nyuszi, imádlak 💖 <br>
+      </p>
+
+      <!-- Spotify playlist iframe -->
+        <iframe data-testid="embed-iframe"
+        id="spotifyFrame"
+        style="border-radius:12px; opacity: 0; transition: opacity 3s;"
+        src="https://open.spotify.com/embed/playlist/6UGTFg7OmnZWoSVd9RgQoE?utm_source=generator"
+        width="100%" height="352" frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+        </iframe>
+
+    </div>
+  </div>
+
+  <!-- YouTube háttérzene -->
+  <iframe id="music"
+    width="0" height="0"
+    src=""
+    frameborder="0"
+    allow="autoplay">
+  </iframe>
+
+  <script src="dreamland.js"></script>
+</body>
+</html>

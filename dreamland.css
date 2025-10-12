@@ -1,0 +1,118 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background: black;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+/* --- Első jelenet --- */
+#scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("assets/dream2.gif");
+  background-size: cover;
+  background-position: center;
+  animation: scrollScene 15s linear forwards;
+  transition: opacity 3s ease;
+}
+
+@keyframes scrollScene {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -1000px; }
+}
+
+.character {
+  width: 120px;
+  height: 120px;
+  background-image: url("assets/pixelgirl.gif");
+  background-size: cover;
+  position: absolute;
+  bottom: 40px;
+  left: 10%;
+  animation: walk 15s linear forwards;
+}
+
+@keyframes walk {
+  from { left: 10%; }
+  to { left: 70%; }
+}
+
+.text-bubble {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  color: #333;
+  font-size: 18px;
+  max-width: 300px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.enemy {
+  width: 120px;
+  position: absolute;
+  bottom: 40px;
+  opacity: 0;
+}
+
+#homeless { left: 65%; }
+#clown { left: 75%; }
+
+#hero {
+  width: 130px;
+  position: absolute;
+  top: -200px;
+  left: 70%;
+  opacity: 0;
+  transition: top 2s ease, opacity 1s;
+}
+
+/* --- Dreamland (final) jelenet --- */
+#finalScene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/dream4.gif");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 3s ease;
+}
+
+#finalScene.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.final-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 0 30px rgba(255, 200, 255, 0.7);
+}
+
+#loveText {
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
