@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Szolgáltatások 💌</title>
+  <link rel="stylesheet" href="services.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="services.html" class="active">💖 Szolgáltatások</a>
+  </nav>
+
+  <div class="services-container">
+    <h1>💌 Hercegnős Szolgáltatások</h1>
+    <p class="subtitle">Hercegnő, tudom nem vagyok a legélesebb kés a fiókban, valamint hogy egy ugly ahh pasi vagyok,</p>
+    <p class="subtitle">viszont ettől még igenis megérdemelsz mindent az egész világon, és minnél jobban megszeretnélek érteni, hiszen megérdemled, hogy legyen egy ilyen személy az életedben</p>
+    <p class="subtitle">Még ha nem is szeretnél írásban jelezni, itt tudtomra tudod adni, hogy érzel, és hogyan tudok rajtad segíteni 😁</p>
+    <p class="subtitle">Szóval üdvözöllek a Lovagias szolgáltatásoknál! 😺</p>
+    <p class="subtitle">Akár valami jó, vagy rossz történt, szeretném ha tudnád, én mindig itt leszek neked, és hű lovagodként cselekszem</p>
+    
+    <div class="service-card">
+      <h2>💸 money for your needs</h2>
+      <p>Akár boldog akár szomorú vagy, mindent megadok ami egy hercegnőnek szükséges. Kérlek válaszd ki mennyit utaljak revoluton</p>
+      <select id="moneyOption">
+        <option value="5000">5 000 Ft</option>
+        <option value="10000">10 000 Ft</option>
+        <option value="15000">15 000 Ft</option>
+        <option value="20000">20 000 Ft</option>
+      </select>
+      <button onclick="sendRequest('Pénz levonás')">Pénz levonása Dávidtól</button>
+    </div>
+
+    <div class="service-card">
+      <h2>🚗 Találkozás</h2>
+      <p>Ha szeretnéd, hogy akármikor, azonnal menjek le hozzád, csak válaszd ki az alkalmat 💕</p>
+      <select id="visitOption">
+        <option value="chillelni szeretne">Just to Chill/Talk</option>
+        <option value="nem érzi jól magát">Nem érzem jól magam 😢</option>
+        <option value="boldog és izgatott">Boldog és izgatott vagyok ✨</option>
+      </select>
+      <button onclick="sendRequest('Fuvar / Találkozás')">Gyere most azonnal 🚗</button>
+    </div>
+
+    <div class="service-card">
+      <h2>📞 Hívás / Beszélgetés</h2>
+      <p>Ha szeretnél beszélni velem, de nem személyesen — jelezd itt 💬</p>
+      <select id="talkOption">
+        <option value="valami rossz történt">Valami rossz történt 😔</option>
+        <option value="valami jó történt">Valami jó történt 😻</option>
+        <option value="csak hiányzom neki">Valami fontosról kell beszélnünk</option>
+      </select>
+      <button onclick="sendRequest('Hívás / Beszélgetés')">Beszéljünk most ☎️</button>
+    </div>
+
+    <div class="service-card">
+      <h2>😤 Durci mód</h2>
+      <p>Ha most nem szeretnéd, hogy írjak — válaszd ki hány óráig tartson a némaság 🕒</p>
+      <select id="ignoreOption">
+        <option value="1 óra">1 óra</option>
+        <option value="3 óra">3 óra</option>
+        <option value="6 óra">6 óra</option>
+        <option value="24 óra">24 óra</option>
+      </select>
+      <button onclick="sendRequest('Durci mód')">Ne írj most nekem 😤</button>
+    </div>
+
+    <div id="statusMessage" class="status-msg"></div>
+  </div>
+
+  <script src="services.js"></script>
+</body>
+</html>
