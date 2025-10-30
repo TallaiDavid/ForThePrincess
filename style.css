@@ -935,3 +935,104 @@ body {
 .right-lower { right: 80px; bottom: 160px; }
 .bottom-left { left: 60px; bottom: 80px; }
 
+/* SERVICES------------------------------------------------------------- */
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f2, #ffd6eb);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #ff80b3;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(255, 120, 170, 0.4);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: #ff99cc;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+  background: #ff66a3;
+}
+
+.services-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 240, 245, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(255, 120, 170, 0.5);
+}
+
+.subtitle {
+  color: #b30059;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(255, 150, 200, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+.service-card h2 {
+  color: #ff4081;
+}
+
+.service-card p {
+  color: #b30059;
+}
+
+select, button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+select {
+  background: #ffe6f2;
+  color: #b30059;
+}
+
+button {
+  background: #ff80b3;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 150, 200, 0.4);
+}
+
+button:hover {
+  background: #ff4da6;
+  transform: scale(1.05);
+}
+
+.status-msg {
+  margin-top: 30px;
+  color: #b30059;
+  font-weight: bold;
+}
+
