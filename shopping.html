@@ -1,72 +1,104 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Fun</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="shopping.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopping & Ajándékok – Hercegnős</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <ul class="navbar">
-  <li><a href="index.html">Főoldal</a></li>
-  <li><a href="shopping.html" class="active">Shopping</a></li>
-</ul>
-
-    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+  <nav class="navbar">
+    <a href="index.html">🏠 Főoldal</a>
+    <a href="game.html">🎮 Játék menü</a>
+    <a href="shopping.html" class="active">🛍️ Shopping</a>
   </nav>
 
-  <main class="shop-page">
-    <h1>Miket kérsz amikor találkozunk?</h1>
-    <img src="shopping/shopping1.gif" alt="Vásárló cica" class="shop-cat">
+  <main class="container">
+    <h1 class="title">🛍️ Shopping & Ajándék Reveal</h1>
+    <h3>hercegnő, te vagy a mindenem, és csodálollak, mint személy, ezért is szeretnék olyan és annyi ajándékot, amilyet csak szeretnél💖</h3>
+    <h3>Tudom, hogy a mostani hibáim, nem ehhez köthetőek, de Mindent megakarok neked adni, és akár kövi randin vagy insant megakarod kapni az adott dolgot, nem fogja semmi sem befolyásolni, és mindent megkapsz😺</h3>
+    <p>Itt van az összes opció:</p>
+    <p>az ajándék szekcióban tudsz pörgetni egy ajándékot, amit legközelebbi randin megkapsz😁</p>
+    <p>Alap hogy minden alkalommal amikor találkozunk, viszek csokit és monstert, de ha egy speckó mennyiség kell, azt beszerzenem neked mindenképp!</p>
+    <p>Az Expressz módban napszaktól és időponttól függetlenül beszerzem neked amire vágysz, és instant elviszem hozzád - annyit fogok írni instán hogy elindultam </p>
 
-    <section class="products">
-      <div class="product-grid">
-        <div class="product" data-name="Virág csokor" data-img="shopping/shopping2.png">
-          <img src="shopping/shopping2.png" alt="Virág csokor">
-          <p>Virág csokor</p>
-        </div>
-        <div class="product" data-name="Fehér virág csokor" data-img="shopping/shopping3.png">
-          <img src="shopping/shopping3.png" alt="Fehér virág csokor">
-          <p>Fehér virág csokor[supreme color]</p>
-        </div>
-        <div class="product" data-name="Legkomolyabb ékszerek" data-img="shopping/shopping4.png">
-          <img src="shopping/shopping4.png" alt="Legkomolyabb ékszerek">
-          <p>Legkomolyabb ékszerek</p>
-        </div>
-        <div class="product" data-name="Nyaklánc + óra" data-img="shopping/shopping5.png">
-          <img src="shopping/shopping5.png" alt="Nyaklánc + óra">
-          <p>Nyaklánc + óra</p>
-        </div>
-        <div class="product" data-name="csoki" data-img="shopping/shopping7.png">
-          <img src="shopping/shopping7.png" alt="csoki">
-          <p>Csoki</p>
-        </div>
-        <div class="product" data-name="Csoki kosár" data-img="shopping/shopping8.png">
-          <img src="shopping/shopping8.png" alt="Csoki kosár">
-          <p>Csoki kosár</p>
-        </div>
-        <div class="product" data-name="Cuki plüssök" data-img="shopping/shopping9.png">
-          <img src="shopping/shopping9.png" alt="Cuki plüssök">
-          <p>Cuki plüssök</p>
-        </div>
-        <div class="product" data-name="Cuki plüssök" data-img="shopping/shopping10.png">
-          <img src="shopping/shopping10.png" alt="Cuki plüssök">
-          <p>Cuki plüssök</p>
-        </div>
-      </div>
-    </section>
-  </main>
+   <!-- 🎁 AJÁNDÉK RULETTE -->
+<section id="giftSection" class="gift-area">
+  <h2>🎁 Ajándék rulette</h2>
 
-  <!-- Modal -->
-  <div id="cart-modal" class="hidden">
-    <div class="modal-content">
-      <h2>A kosarad tartalma 🛍️</h2>
-      <ul id="cart-items"></ul>
-      <button id="finalize">Instant Dávid payment indítása</button>
-      <button id="close-cart">Bezárás</button>
+  <div class="gift-container">
+    <div class="gift-card" data-gift="ajandek2_keyboard.png">
+      <img class="gift-front" src="assets/gift.gif">
+      <img class="gift-back" src="assets/ajandek2_keyboard.png">
+    </div>
+
+    <div class="gift-card" data-gift="ajandek3_liesofp.jpg">
+      <img class="gift-front" src="assets/gift.gif">
+      <img class="gift-back" src="assets/ajandek3_liesofp.jpg">
+    </div>
+
+    <div class="gift-card" data-gift="ajandek4_bunny.jpg">
+      <img class="gift-front" src="assets/gift.gif">
+      <img class="gift-back" src="assets/ajandek4_bunny.jpg">
     </div>
   </div>
+
+  <button id="spinButton" class="bigButton">Pörgetem! 🎉</button>
+
+  <button id="claimGift" class="bigButton" style="display:none;">Akarom! 💖</button>
+
+  <div id="giftStatus" class="status"></div>
+</section>
+
+
+    <hr/>
+
+    <!-- SHOP SECTION -->
+    <section class="shop-section" aria-label="Shopping Cart">
+      <h2>🍫 Shopping Cart (Csoki & Monster)</h2>
+
+      <div class="shop-controls">
+        <label for="itemSelect">Válassz terméket:</label>
+        <select id="itemSelect">
+          <option value="Csoki">Csoki 🍫</option>
+          <option value="Monster">Monster 🧃</option>
+        </select>
+        <button id="addItemBtn">Hozzáadás</button>
+      </div>
+
+      <ul id="cartList" class="cart-list" aria-live="polite"></ul>
+      <div class="cart-actions">
+        <button id="checkoutBtn" class="checkout-btn">Vásárlás befejezése</button>
+        <button id="clearCartBtn" class="clear-btn">Kosár ürítése</button>
+      </div>
+    </section>
+
+    <hr/>
+
+    <!-- EXPRESS SECTION -->
+    <section class="express-section" aria-label="Expressz mód">
+      <h2>⚡ Expressz mód</h2>
+      <p>Ha azonnal látsz valamit (pl. Instagram poszt), illeszd be a linket és küldd el — azonnal jelezni fogok.</p>
+      <input type="url" id="expressLink" placeholder="Illeszd be a linket (https://...)" />
+      <input type="text" id="expressComment" placeholder="Megjegyzés (opcionális)" />
+      <button id="expressBtn">Azonnal kell!</button>
+    </section>
+
+    <div id="statusMessage" class="status-text" role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- Happy cat overlay -->
+  <img id="happyCat" src="assets/car8.gif" alt="Boldog cica" />
+  <img id="happyCat" src="assets/car9.gif" alt="Boldog cica" />
+  <img id="happyCat" src="assets/car17.gif" alt="Boldog cica" />
+
+  <!-- Popup -->
+  <div id="popup" role="alertdialog" aria-hidden="true">
+    <p id="popupText"></p>
+  </div>
+
+  <!-- EmailJS SDK + main script -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="shopping.js"></script>
 </body>
 </html>
